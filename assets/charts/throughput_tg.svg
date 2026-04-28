@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="720" height="420" fill="white"/>
+<text x="360.0" y="28" text-anchor="middle" font-size="18" font-weight="600" fill="#1f2933">Qwen3.6-27B GGUF — token-generation throughput</text>
+<text x="360.0" y="48" text-anchor="middle" font-size="12" fill="#9aa5b1">llama-bench tg128 · V100 · partial offload (Q2_K is the only one that fully fits)</text>
+<text x="22" y="205.0" text-anchor="middle" font-size="12" fill="#9aa5b1" transform="rotate(-90 22 205.0)">tok/s</text>
+<line x1="80" y1="350.0" x2="690" y2="350.0" stroke="#e4e7eb" stroke-width="1"/>
+<text x="72" y="354.0" text-anchor="end" font-size="11" fill="#9aa5b1">0.0</text>
+<line x1="80" y1="277.5" x2="690" y2="277.5" stroke="#e4e7eb" stroke-width="1"/>
+<text x="72" y="281.5" text-anchor="end" font-size="11" fill="#9aa5b1">10.0</text>
+<line x1="80" y1="205.0" x2="690" y2="205.0" stroke="#e4e7eb" stroke-width="1"/>
+<text x="72" y="209.0" text-anchor="end" font-size="11" fill="#9aa5b1">20.0</text>
+<line x1="80" y1="132.5" x2="690" y2="132.5" stroke="#e4e7eb" stroke-width="1"/>
+<text x="72" y="136.5" text-anchor="end" font-size="11" fill="#9aa5b1">30.0</text>
+<line x1="80" y1="60.0" x2="690" y2="60.0" stroke="#e4e7eb" stroke-width="1"/>
+<text x="72" y="64.0" text-anchor="end" font-size="11" fill="#9aa5b1">40.0</text>
+<line x1="80" y1="350.0" x2="690" y2="350.0" stroke="#9aa5b1" stroke-width="1.5"/>
+<rect x="114.3125" y="81.53249999999997" width="83.875" height="268.46750000000003" fill="#f5a623" rx="3"/>
+<text x="156.25" y="75.53249999999997" text-anchor="middle" font-size="12" font-weight="600" fill="#1f2933">37.03</text>
+<text x="156.25" y="372.0" text-anchor="middle" font-size="13" fill="#1f2933">Q2_K</text>
+<rect x="266.8125" y="314.62" width="83.875" height="35.379999999999995" fill="#4a90e2" rx="3"/>
+<text x="308.75" y="308.62" text-anchor="middle" font-size="12" font-weight="600" fill="#1f2933">4.88</text>
+<text x="308.75" y="372.0" text-anchor="middle" font-size="13" fill="#1f2933">Q4_K_M</text>
+<rect x="419.3125" y="313.895" width="83.875" height="36.10500000000002" fill="#4a90e2" rx="3"/>
+<text x="461.25" y="307.895" text-anchor="middle" font-size="12" font-weight="600" fill="#1f2933">4.98</text>
+<text x="461.25" y="372.0" text-anchor="middle" font-size="13" fill="#1f2933">Q5_K_S</text>
+<rect x="571.8125" y="335.645" width="83.875" height="14.355000000000018" fill="#4a90e2" rx="3"/>
+<text x="613.75" y="329.645" text-anchor="middle" font-size="12" font-weight="600" fill="#1f2933">1.98</text>
+<text x="613.75" y="372.0" text-anchor="middle" font-size="13" fill="#1f2933">Q8_0</text>
+<rect x="80" y="392" width="14" height="12" fill="#f5a623" rx="2"/>
+<text x="102" y="402" font-size="12" fill="#9aa5b1">Q2_K = highest value of the four</text>
+</svg>
