@@ -198,21 +198,21 @@ Real numbers from the full pipeline (`qwen36gguf pipeline --model-id Qwen/Qwen3.
 
 #### Perplexity by quant (Qwen3.6-27B)
 
-![Perplexity by quant](assets/charts/perplexity.svg)
+![Perplexity by quant](assets/charts/perplexity.png)
 
 #### File size by quant (Qwen3.6-27B)
 
-![File size by quant](assets/charts/filesize.svg)
+![File size by quant](assets/charts/filesize.png)
 
 #### Throughput on V100
 
-![Prompt-processing throughput](assets/charts/throughput_pp.svg)
+![Prompt-processing throughput](assets/charts/throughput_pp.png)
 
-![Token-generation throughput](assets/charts/throughput_tg.svg)
+![Token-generation throughput](assets/charts/throughput_tg.png)
 
 #### Pipeline that produced these GGUFs
 
-![Pipeline diagram](assets/charts/pipeline.svg)
+![Pipeline diagram](assets/charts/pipeline.png)
 
 **Read:** Q4_K_M is the value pick for Qwen3.6-27B — it lands within ~0.16 perplexity of Q8_0 at ~58 % the file size and gets the highest measured `pp512` of the four (360.89 t/s with -ngl 50 on V100). Q2_K halves the size again at the cost of ~0.94 perplexity. Throughput numbers reflect the partial offload setup; on a 24 GB+ GPU all four converge on the Q2_K headline number.
 

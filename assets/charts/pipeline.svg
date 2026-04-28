@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="920" height="380" fill="white"/>
-<text x="460" y="28" text-anchor="middle" font-size="18" font-weight="600" fill="#1f2933">qwen36gguf pipeline — what built these GGUFs</text>
+<text x="460" y="28" text-anchor="middle" font-size="18" font-weight="600" fill="#1f2933">qwen36gguf pipeline -- what built these GGUFs</text>
 <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#9aa5b1"/></marker></defs>
 <rect x="40" y="70" width="180" height="70" rx="8" fill="#e3effd" stroke="#4a90e2" stroke-width="1.5"/><text x="130.0" y="101.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">Qwen/Qwen3.6-27B</text><text x="130.0" y="119.0" text-anchor="middle" font-size="11" fill="#52606d">snapshot_download (HF)</text>
 <line x1="220" y1="105" x2="270" y2="105" stroke="#9aa5b1" stroke-width="1.5" marker-end="url(#arr)"/>
-<rect x="270" y="70" width="180" height="70" rx="8" fill="#e3effd" stroke="#4a90e2" stroke-width="1.5"/><text x="360.0" y="101.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">convert_hf_to_gguf.py</text><text x="360.0" y="119.0" text-anchor="middle" font-size="11" fill="#52606d">→ f16.gguf  (50 GB)</text>
+<rect x="270" y="70" width="180" height="70" rx="8" fill="#e3effd" stroke="#4a90e2" stroke-width="1.5"/><text x="360.0" y="101.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">convert_hf_to_gguf.py</text><text x="360.0" y="119.0" text-anchor="middle" font-size="11" fill="#52606d">-> f16.gguf  (50 GB)</text>
 <line x1="450" y1="105" x2="500" y2="105" stroke="#9aa5b1" stroke-width="1.5" marker-end="url(#arr)"/>
 <rect x="500" y="70" width="180" height="70" rx="8" fill="#fff4e0" stroke="#f5a623" stroke-width="1.5"/><text x="590.0" y="101.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">llama-quantize</text><text x="590.0" y="119.0" text-anchor="middle" font-size="11" fill="#52606d">Q2 / Q4_K_M / Q5_K_S / Q8_0</text>
-<rect x="40" y="230" width="170" height="50" rx="8" fill="#fff4e0" stroke="#f5a623" stroke-width="1.5"/><text x="125.0" y="258.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">Q2_K · 10 GB</text>
+<rect x="40" y="230" width="170" height="50" rx="8" fill="#fff4e0" stroke="#f5a623" stroke-width="1.5"/><text x="125.0" y="258.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">Q2_K - 10 GB</text>
 <line x1="590" y1="140" x2="125" y2="230" stroke="#9aa5b1" stroke-width="1.5" marker-end="url(#arr)"/>
-<rect x="250" y="230" width="170" height="50" rx="8" fill="#fff4e0" stroke="#f5a623" stroke-width="1.5"/><text x="335.0" y="258.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">Q4_K_M · 15.4 GB</text>
+<rect x="250" y="230" width="170" height="50" rx="8" fill="#fff4e0" stroke="#f5a623" stroke-width="1.5"/><text x="335.0" y="258.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">Q4_K_M - 15.4 GB</text>
 <line x1="590" y1="140" x2="335" y2="230" stroke="#9aa5b1" stroke-width="1.5" marker-end="url(#arr)"/>
-<rect x="460" y="230" width="170" height="50" rx="8" fill="#fff4e0" stroke="#f5a623" stroke-width="1.5"/><text x="545.0" y="258.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">Q5_K_S · 17.4 GB</text>
+<rect x="460" y="230" width="170" height="50" rx="8" fill="#fff4e0" stroke="#f5a623" stroke-width="1.5"/><text x="545.0" y="258.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">Q5_K_S - 17.4 GB</text>
 <line x1="590" y1="140" x2="545" y2="230" stroke="#9aa5b1" stroke-width="1.5" marker-end="url(#arr)"/>
-<rect x="670" y="230" width="170" height="50" rx="8" fill="#fff4e0" stroke="#f5a623" stroke-width="1.5"/><text x="755.0" y="258.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">Q8_0 · 26.6 GB</text>
+<rect x="670" y="230" width="170" height="50" rx="8" fill="#fff4e0" stroke="#f5a623" stroke-width="1.5"/><text x="755.0" y="258.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">Q8_0 - 26.6 GB</text>
 <line x1="590" y1="140" x2="755" y2="230" stroke="#9aa5b1" stroke-width="1.5" marker-end="url(#arr)"/>
-<rect x="40" y="310" width="230" height="50" rx="8" fill="#e3effd" stroke="#4a90e2" stroke-width="1.5"/><text x="155.0" y="331.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">llama-perplexity + llama-bench</text><text x="155.0" y="349.0" text-anchor="middle" font-size="11" fill="#52606d">WikiText-2 PPL · pp512 · tg128</text>
+<rect x="40" y="310" width="230" height="50" rx="8" fill="#e3effd" stroke="#4a90e2" stroke-width="1.5"/><text x="155.0" y="331.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">llama-perplexity + llama-bench</text><text x="155.0" y="349.0" text-anchor="middle" font-size="11" fill="#52606d">WikiText-2 PPL - pp512 - tg128</text>
 <line x1="270" y1="335" x2="320" y2="335" stroke="#9aa5b1" stroke-width="1.5" marker-end="url(#arr)"/>
 <rect x="320" y="310" width="230" height="50" rx="8" fill="#e3effd" stroke="#4a90e2" stroke-width="1.5"/><text x="435.0" y="331.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">hf_export/</text><text x="435.0" y="349.0" text-anchor="middle" font-size="11" fill="#52606d">README + .gitattributes + GGUFs</text>
 <line x1="550" y1="335" x2="600" y2="335" stroke="#9aa5b1" stroke-width="1.5" marker-end="url(#arr)"/>
-<rect x="600" y="310" width="280" height="50" rx="8" fill="#e6f6ec" stroke="#3aa55a" stroke-width="1.5"/><text x="740.0" y="331.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">HfApi.upload_folder</text><text x="740.0" y="349.0" text-anchor="middle" font-size="11" fill="#52606d">→ huggingface.co/daksh-neo/...</text>
+<rect x="600" y="310" width="280" height="50" rx="8" fill="#e6f6ec" stroke="#3aa55a" stroke-width="1.5"/><text x="740.0" y="331.0" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2933">HfApi.upload_folder</text><text x="740.0" y="349.0" text-anchor="middle" font-size="11" fill="#52606d">-> huggingface.co/daksh-neo/...</text>
 <line x1="125" y1="280" x2="125" y2="310" stroke="#9aa5b1" stroke-width="1.5" marker-end="url(#arr)"/>
 <line x1="335" y1="280" x2="200" y2="310" stroke="#9aa5b1" stroke-width="1.5" marker-end="url(#arr)"/>
 <line x1="545" y1="280" x2="200" y2="310" stroke="#9aa5b1" stroke-width="1.5" marker-end="url(#arr)"/>

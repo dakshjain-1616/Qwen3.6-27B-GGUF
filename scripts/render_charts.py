@@ -1,6 +1,6 @@
 """Render the SVG infographics shipped with the hf_export/ bundle.
 
-Pure stdlib — no matplotlib, no extra deps. Produces deterministic,
+Pure stdlib -- no matplotlib, no extra deps. Produces deterministic,
 GitHub- and HuggingFace-renderable bar charts under ``charts/`` next to
 the model card.
 """
@@ -89,9 +89,9 @@ def _bar_chart(
     for i, (label, v) in enumerate(zip(QUANTS, values, strict=True)):
         x = PAD_L + i * (bar_w + gap) + gap / 2
         if v is None:
-            # Render an empty slot with "—"
+            # Render an empty slot with "--"
             parts.append(
-                f'<text x="{x + bar_w/2}" y="{base_y - 8}" text-anchor="middle" font-size="13" fill="{AXIS}">—</text>'
+                f'<text x="{x + bar_w/2}" y="{base_y - 8}" text-anchor="middle" font-size="13" fill="{AXIS}">--</text>'
             )
         else:
             top_y = y_pix(v)
@@ -132,7 +132,7 @@ def _pipeline_diagram() -> str:
     parts.append('<rect width="920" height="380" fill="white"/>')
     parts.append(
         '<text x="460" y="28" text-anchor="middle" font-size="18" font-weight="600" fill="#1f2933">'
-        "qwen36gguf pipeline — what built these GGUFs</text>"
+        "qwen36gguf pipeline -- what built these GGUFs</text>"
     )
 
     def box(x: int, y: int, w: int, h: int, label: str, sub: str = "", fill: str = "#e3effd", stroke: str = "#4a90e2") -> str:
@@ -154,28 +154,28 @@ def _pipeline_diagram() -> str:
         '<path d="M 0 0 L 10 5 L 0 10 z" fill="#9aa5b1"/></marker></defs>'
     )
 
-    # Row 1: download → convert → quantize
+    # Row 1: download -> convert -> quantize
     parts.append(box(40, 70, 180, 70, "Qwen/Qwen3.6-27B", "snapshot_download (HF)"))
     parts.append(arrow(220, 105, 270, 105))
-    parts.append(box(270, 70, 180, 70, "convert_hf_to_gguf.py", "→ f16.gguf  (50 GB)"))
+    parts.append(box(270, 70, 180, 70, "convert_hf_to_gguf.py", "-> f16.gguf  (50 GB)"))
     parts.append(arrow(450, 105, 500, 105))
     parts.append(box(500, 70, 180, 70, "llama-quantize", "Q2 / Q4_K_M / Q5_K_S / Q8_0", fill="#fff4e0", stroke="#f5a623"))
 
     # Branch out: 4 GGUFs
     cy = 230
     quant_x = [40, 250, 460, 670]
-    sizes = ["Q2_K · 10 GB", "Q4_K_M · 15.4 GB", "Q5_K_S · 17.4 GB", "Q8_0 · 26.6 GB"]
+    sizes = ["Q2_K - 10 GB", "Q4_K_M - 15.4 GB", "Q5_K_S - 17.4 GB", "Q8_0 - 26.6 GB"]
     for x, label in zip(quant_x, sizes, strict=True):
         parts.append(box(x, cy, 170, 50, label, fill="#fff4e0", stroke="#f5a623"))
         # arrow from quantize box down to each
         parts.append(arrow(590, 140, x + 85, cy))
 
-    # Row 3: bench → assemble → push
-    parts.append(box(40, 310, 230, 50, "llama-perplexity + llama-bench", "WikiText-2 PPL · pp512 · tg128"))
+    # Row 3: bench -> assemble -> push
+    parts.append(box(40, 310, 230, 50, "llama-perplexity + llama-bench", "WikiText-2 PPL - pp512 - tg128"))
     parts.append(arrow(270, 335, 320, 335))
     parts.append(box(320, 310, 230, 50, "hf_export/", "README + .gitattributes + GGUFs"))
     parts.append(arrow(550, 335, 600, 335))
-    parts.append(box(600, 310, 280, 50, "HfApi.upload_folder", "→ huggingface.co/daksh-neo/...", fill="#e6f6ec", stroke="#3aa55a"))
+    parts.append(box(600, 310, 280, 50, "HfApi.upload_folder", "-> huggingface.co/daksh-neo/...", fill="#e6f6ec", stroke="#3aa55a"))
 
     # Connector from quants to bench
     parts.append(arrow(125, 280, 125, 310))
@@ -200,8 +200,8 @@ def main() -> None:
 
     (out / "perplexity.svg").write_text(
         _bar_chart(
-            title="Qwen3.6-27B GGUF — WikiText-2 perplexity",
-            subtitle="Lower is better · ctx 512, --parallel 1, V100",
+            title="Qwen3.6-27B GGUF -- WikiText-2 perplexity",
+            subtitle="Lower is better - ctx 512, --parallel 1, V100",
             values=PPL,
             y_min=5.5,
             y_max=7.0,
@@ -213,8 +213,8 @@ def main() -> None:
 
     (out / "filesize.svg").write_text(
         _bar_chart(
-            title="Qwen3.6-27B GGUF — file size on disk",
-            subtitle="Smaller is cheaper to host & download",
+            title="Qwen3.6-27B GGUF -- file size on disk",
+            subtitle="Smaller is cheaper to host &amp; download",
             values=SIZES_GB,
             y_min=0.0,
             y_max=30.0,
@@ -226,8 +226,8 @@ def main() -> None:
 
     (out / "throughput_pp.svg").write_text(
         _bar_chart(
-            title="Qwen3.6-27B GGUF — prompt-processing throughput",
-            subtitle="llama-bench pp512 · V100 · partial offload sized to fit 16 GB VRAM",
+            title="Qwen3.6-27B GGUF -- prompt-processing throughput",
+            subtitle="llama-bench pp512 - V100 - partial offload sized to fit 16 GB VRAM",
             values=PP512,
             y_min=0.0,
             y_max=500.0,
@@ -239,8 +239,8 @@ def main() -> None:
 
     (out / "throughput_tg.svg").write_text(
         _bar_chart(
-            title="Qwen3.6-27B GGUF — token-generation throughput",
-            subtitle="llama-bench tg128 · V100 · partial offload (Q2_K is the only one that fully fits)",
+            title="Qwen3.6-27B GGUF -- token-generation throughput",
+            subtitle="llama-bench tg128 - V100 - partial offload (Q2_K is the only one that fully fits)",
             values=TG128,
             y_min=0.0,
             y_max=40.0,
@@ -257,7 +257,19 @@ def main() -> None:
         for svg in out.glob("*.svg"):
             (t / svg.name).write_text(svg.read_text())
 
-    print(f"wrote {len(list(out.glob('*.svg')))} SVG files to {' & '.join(str(t) for t in targets)}/")
+    # Also render PNG copies — HuggingFace's markdown sanitizer drops <img> refs
+    # to *.svg, so the model card needs PNG. We keep both formats so the GitHub
+    # README can use crisp SVG and HF can use the PNG fallback.
+    try:
+        import cairosvg  # type: ignore[import-not-found]
+    except ImportError:
+        print("cairosvg not installed; skipping PNG render. `uv pip install cairosvg` to enable.")
+        return
+    for t in targets:
+        for svg in t.glob("*.svg"):
+            cairosvg.svg2png(url=str(svg), write_to=str(svg.with_suffix(".png")), output_width=1440)
+
+    print(f"wrote {len(list(out.glob('*.svg')))} SVG + PNG pairs to {' & '.join(str(t) for t in targets)}/")
 
 
 if __name__ == "__main__":

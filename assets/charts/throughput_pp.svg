@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">
 <rect width="720" height="420" fill="white"/>
-<text x="360.0" y="28" text-anchor="middle" font-size="18" font-weight="600" fill="#1f2933">Qwen3.6-27B GGUF — prompt-processing throughput</text>
-<text x="360.0" y="48" text-anchor="middle" font-size="12" fill="#9aa5b1">llama-bench pp512 · V100 · partial offload sized to fit 16 GB VRAM</text>
+<text x="360.0" y="28" text-anchor="middle" font-size="18" font-weight="600" fill="#1f2933">Qwen3.6-27B GGUF -- prompt-processing throughput</text>
+<text x="360.0" y="48" text-anchor="middle" font-size="12" fill="#9aa5b1">llama-bench pp512 - V100 - partial offload sized to fit 16 GB VRAM</text>
 <text x="22" y="205.0" text-anchor="middle" font-size="12" fill="#9aa5b1" transform="rotate(-90 22 205.0)">tok/s</text>
 <line x1="80" y1="350.0" x2="690" y2="350.0" stroke="#e4e7eb" stroke-width="1"/>
 <text x="72" y="354.0" text-anchor="end" font-size="11" fill="#9aa5b1">0.0</text>
@@ -14,7 +14,7 @@
 <line x1="80" y1="60.0" x2="690" y2="60.0" stroke="#e4e7eb" stroke-width="1"/>
 <text x="72" y="64.0" text-anchor="end" font-size="11" fill="#9aa5b1">500.0</text>
 <line x1="80" y1="350.0" x2="690" y2="350.0" stroke="#9aa5b1" stroke-width="1.5"/>
-<text x="156.25" y="342.0" text-anchor="middle" font-size="13" fill="#9aa5b1">—</text>
+<text x="156.25" y="342.0" text-anchor="middle" font-size="13" fill="#9aa5b1">--</text>
 <text x="156.25" y="372.0" text-anchor="middle" font-size="13" fill="#1f2933">Q2_K</text>
 <rect x="266.8125" y="140.68380000000002" width="83.875" height="209.31619999999998" fill="#4a90e2" rx="3"/>
 <text x="308.75" y="134.68380000000002" text-anchor="middle" font-size="12" font-weight="600" fill="#1f2933">360.9</text>
